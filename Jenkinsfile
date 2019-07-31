@@ -6,5 +6,10 @@ pipeline {
         batchFile 'mvn clean compile'
       }
     }
+    stage ('Test') {
+      steps {
+        batchFile 'mvn test'
+      }
+    }
   }
 }
