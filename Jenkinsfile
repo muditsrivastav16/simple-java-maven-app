@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'MyNode'
+  }
   stages {
     stage ('Compile') {
       steps {
