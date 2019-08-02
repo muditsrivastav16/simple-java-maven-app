@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'MyNode'
-  }
+  agent any
   stages {
     stage ('Configure') {
       
