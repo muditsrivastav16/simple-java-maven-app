@@ -4,11 +4,17 @@ pipeline {
   }
   stages {
     stage ('Configure') {
+      
+      steps {
+      
       publisher {
         mailer('2015pcecsmudit@poornima.org', true, true)
       }
       trigger {
         scm('* * * * *')
+        
+      }
+        
       }
     }
   
