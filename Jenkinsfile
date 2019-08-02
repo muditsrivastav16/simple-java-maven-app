@@ -1,19 +1,7 @@
 pipeline {
   agent any
-  stages {
-    stage ('Configure') {
-      
-      steps {
-      
-      
-      trigger {
-        scm('* * * * *')
-        
-      }
-        
-      }
-    }
-  
+  triggers {
+    cron('* * * * *')
     stage ('Compile') {
       steps {
         batchFile 'mvn clean compile'
