@@ -2,11 +2,12 @@ pipeline {
   agent  {
       label 'MyNode'
     }
- 
   
   triggers {
     cron('H * * * *')
+    pollSCM('H * * * *')
   }
+  
   stages {
     stage ('Compile') {
       steps {
