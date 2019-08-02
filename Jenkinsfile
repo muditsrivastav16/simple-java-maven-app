@@ -15,9 +15,4 @@ pipeline {
       }
     }
   }
-  post {
-    always {
-      mailer('2015pcecsmudit@poornima.org', true, true)
-    }
-  }
 }
