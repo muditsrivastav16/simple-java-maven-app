@@ -17,7 +17,9 @@ pipeline {
   }
   post {
     always {
-      echo 'post is executted'
+      publisher {
+        mailer('2015pcecsmudit@poornima.org', true, true)
+      }
     }
   }
 }
