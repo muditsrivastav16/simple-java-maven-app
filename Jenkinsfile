@@ -16,8 +16,6 @@ pipeline {
     }
   }
   post {
-    publisher {
-        mailer('2015pcecsmudit@poornima.org', true, true)
-      }
+    mailer('2015pcecsmudit@poornima.org', true, true)
   }
 }
