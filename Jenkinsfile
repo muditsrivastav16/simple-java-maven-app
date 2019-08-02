@@ -2,6 +2,12 @@ pipeline {
   agent {
     label 'MyNode'
   }
+  publisher {
+   mailer('2015pcecsmudit@poornima.org', true, true)
+  }
+  trigger {
+    scm('* * * * *')
+  }
   stages {
     stage ('Compile') {
       steps {
