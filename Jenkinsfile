@@ -1,9 +1,8 @@
 pipeline {
-  agent {
-    node {
+  agent  {
       label 'MyNode'
     }
-  }
+ 
   
   triggers {
     cron('H * * * *')
