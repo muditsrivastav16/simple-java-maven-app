@@ -5,9 +5,7 @@ pipeline {
       
       steps {
       
-      publisher {
-        mailer('2015pcecsmudit@poornima.org', true, true)
-      }
+      
       trigger {
         scm('* * * * *')
         
@@ -26,5 +24,10 @@ pipeline {
         batchFile 'mvn test'
       }
     }
+  }
+  post {
+    publisher {
+        mailer('2015pcecsmudit@poornima.org', true, true)
+      }
   }
 }
