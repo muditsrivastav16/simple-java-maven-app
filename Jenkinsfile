@@ -1,6 +1,6 @@
 pipeline {
   agent  {
-      label 'MyNode'
+      label 'Ubuntu'
     }
   
   triggers {
@@ -11,12 +11,12 @@ pipeline {
   stages {
     stage ('Compile') {
       steps {
-        batchFile 'mvn clean compile'
+        sh 'mvn clean compile'
       }
     }
     stage ('Test') {
       steps {
-        batchFile 'mvn test'
+        sh 'mvn test'
       }
     }
   }
