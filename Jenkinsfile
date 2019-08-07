@@ -1,7 +1,9 @@
 pipeline {
-  agent  {
+  agent {
+    node {
       label 'Ubuntu'
     }
+  }
   
   triggers {
     cron('H * * * *')
